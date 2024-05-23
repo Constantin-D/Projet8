@@ -1,0 +1,17 @@
+@use "./app";
+
+//base
+
+//components
+@use "./components/banner";
+
+//layout
+@use "./layout/header";
+
+//pages
+
+@use "./pages/home";
+
+
+//utils
+@use "./utils/animations.scss";

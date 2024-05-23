@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 1.5rem;
+}
+.header nav ul {
+  display: flex;
+}
+.header nav ul a {
+  text-decoration: none;
+}
+.header nav ul a.underline {
+  text-decoration: underline;
+  color: #000;
+}
+.header nav ul li {
+  margin-left: 3rem;
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  color: #000;
+}
+
+.logo {
+  width: 210px;
+  height: 65px;
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 1.5rem;
+    nav {
+        ul {
+            display: flex;
+            a {
+                text-decoration: none;
+                &.underline {
+                    text-decoration: underline;
+                    color: #000;
+                }
+            }
+            li {
+                margin-left:  3rem;
+                list-style: none;
+                font-size: large;
+                font-weight: 600;
+                color: #000;
+            }
+        }
+        }
+      
+};
+
+.logo {
+    width: 210px;
+    height: 65px;
+}
