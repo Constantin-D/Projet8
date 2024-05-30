@@ -1,0 +1,23 @@
+//base
+@use "../app/app.scss";
+
+//components
+@use "../banner/banner.scss";
+@use "../collapse/collapse.scss";
+
+//layout
+@use "../header/header.scss";
+@use "../footer/footer.scss";
+
+//pages
+@use "../pages/home/home-container.scss";
+@use "../pages/home/gallery.scss";
+@use "../pages/apartmentDetails/apartment-details.scss";
+@use "../pages/about/about-container";
+@use "../pages/notFound/not-found.scss";
+
+
+// //utils
+// @use "./utils/animations";
+// @use "./utils/variables";
+// @use "./utils/mixins";

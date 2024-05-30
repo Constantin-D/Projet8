@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import banner from "../../assets/images/Banner.png";
-import Banner from "../Banner";
-import Cards from "../Cards";
+import banner from "../../../assets/images/Banner.png";
+import Banner from "../../banner/Banner";
+import Cards from "../../cards/Cards";
+import "./home-container.scss";
+import "./gallery.scss";
 
 const Home = () => {
     const [RentalHouses, setRentalHouses] = useState([]);
 
     useEffect(() => {
-        fetch("./RentalHouses.json")
+        fetch("/RentalHouses.json")
             .then((response) => response.json())
             .then((data) => {
                 console.log("Data fetched:", data); // Debug
@@ -27,6 +29,7 @@ const Home = () => {
                 {RentalHouses.map((rentalHouse) => (
                     <Cards
                         key={rentalHouse.id}
+                        id={rentalHouse.id}
                         image={rentalHouse.cover}
                         name={rentalHouse.title}
                     />

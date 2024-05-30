@@ -1,6 +1,6 @@
 .gallery {
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
+    border-radius: 1.2rem;
     min-height: 50vh;
     display: flex;
     flex-wrap: wrap;
@@ -23,18 +23,34 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 1rem;
+            border-radius: 0.6rem;
         }
 
-        h2 {
+        h3 {
             position: absolute;
             top: 80%;
             left: 35%;
             transform: translate(-50%, -50%);
             color: #FFFFFF;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 300;
         }
 
     }
+}
+
+@media screen and (max-width: 715px) {
+    .gallery {
+        background-color: white;
+    }
+
+    .Cards {
+        max-width: 400px;
+        height: 400px;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+    
 }

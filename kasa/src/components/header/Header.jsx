@@ -1,5 +1,6 @@
-import logoKasa from '../assets/images/logoKasa.png';
-import { NavLink } from 'react-router-dom';
+import logoKasa from "../../assets/images/logoKasa.png";
+import { NavLink } from "react-router-dom";
+import "./header.scss";
 
 const Header = () => {
     return (
