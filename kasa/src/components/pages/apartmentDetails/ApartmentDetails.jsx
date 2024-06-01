@@ -1,8 +1,10 @@
 
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Collapse from "../../collapse/Collapse";
+import RatingStar from "../../ratingStar/RatingStar";
+import Slider from "../../slider/Slider";
 import "./apartment-details.scss";
 
 const ApartmentDetails = () => {
@@ -35,28 +37,21 @@ const ApartmentDetails = () => {
         return <div>Loading...</div>;
     }
 
-    const renderStars = (rating) => {
-        // Fonction pour afficher les étoiles en fonction de la note
-        return [...Array(5)].map((_, index) => (
-            <FontAwesomeIcon
-                key={index}
-                icon={index < rating ? solidStar : emptyStar}
-                className="star-icon"
-            />
-        ));
-    };
+    // const renderStars = (rating) => {
+    //     // Fonction pour afficher les étoiles en fonction de la note
+    //     return [...Array(5)].map((_, index) => (
+    //         <img
+    //             key={index}
+    //             src={index < rating ? redStar : greyStar}
+    //             alt={index < rating ? "Star Red" : "Star Grey"}
+    //             className="star-icon"
+    //         />
+    //     ));
+    // };
 
     return (
         <div className="apartment-details">
-            <div className="carrousel">
-                {apartment.pictures.map((picture, index) => (
-                    <img
-                        key={index}
-                        src={picture}
-                        alt={`Apartment ${index + 1}`}
-                    />
-                ))}
-            </div>
+            <Slider pictures={apartment.pictures} />
             <h2>{apartment.title}</h2>
             <div className="apartment-info">
                 <div className="host-info">
@@ -68,10 +63,14 @@ const ApartmentDetails = () => {
                 </div>
                 <div className="location-rating">
                     <p>{apartment.location}</p>
-                    <div className="rating">
-                        {renderStars(parseInt(apartment.rating))}
-                    </div>
+                    <RatingStar rating={parseInt(apartment.rating)} />    
                 </div>
+            </div>
+            <div className="tags">
+                {apartment.tags.map((tag, index) => (
+                    <span key={index} className="tag">{tag}
+                    </span>
+                ))}
             </div>
             <Collapse
                 title="Description"
